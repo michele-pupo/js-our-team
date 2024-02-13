@@ -51,7 +51,7 @@ const membersTeam = [
 // console.log(membersTeam);
 
 // stampiamo in pagina le informazioni fornite
-const listElement = document.querySelector("ul");
+const listElement = document.getElementById("grid-members");
 
 // ciclo for per iterare su ogni elemtno dell'array (oggetto)
 for (let i = 0; i < membersTeam.length; i++){
@@ -69,6 +69,18 @@ for (let i = 0; i < membersTeam.length; i++){
         textOnPage += `${key}: ${actualMember[key]}`;
     }
 
-    // stampiamo in pagina le informazioni fornite tramite oggetti
-    listElement.innerHTML += `<li>${textOnPage}</li>`;
+    // // stampiamo in pagina le informazioni fornite tramite oggetti
+    // listElement.innerHTML += `<li>${textOnPage}</li>`;
+
+
+// utilizziamo "append" per inserire oggetti nel DOM
+const li = document.createElement('li');
+li.classList.add('card');
+
+const img = document.createElement('img');
+img.src = `img/${actualMember.photo}`;
+img.alt = actualMember.photo;
+img.classList.add('image-set')
+li.append(img);
+
 }
