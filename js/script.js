@@ -74,16 +74,21 @@ for (let i = 0; i < membersTeam.length; i++){
 
 
     // utilizziamo "append" per inserire oggetti nel DOM
-    const li = document.createElement("li");
-    li.classList.add("card");
+    const liElement = document.createElement("li");
+    liElement.classList.add("card");
 
     // appendiamo l'immagine con chiave "photo"
     const img = document.createElement("img");
     img.src = `img/${actualMember.photo}`;
-    li.append(img);
+    liElement.append(img);
+
+    // appendiamo la chiave "nome" in pagina, al di sotto della foto
+    const h3Element = document.createElement("h3");
+    h3Element.innerHTML = actualMember.name;
+    liElement.append(h3Element);
     
 
-    listElement.append(li);
+    listElement.append(liElement);
 
 
 }
