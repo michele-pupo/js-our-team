@@ -46,3 +46,22 @@ const membersTeam = [
     "photo": 'barbara-ramos-graphic-designer.jpg'
     },
 ];
+
+// stampiamo in console l'array di oggetti
+// console.log(membersTeam);
+
+// stampiamo in pagina le informazioni fornite
+const listElement = document.querySelector("ul");
+
+// ciclo for per iterare su ogni elemtno dell'array (oggetto)
+for (let i = 0; i < membersTeam.length; i++){
+
+    const actualMember = membersTeam[i];
+
+    // ciclo "for-in" per ciclare su ogni chiave dell'oggetto
+    for (let key in actualMember){
+
+        // stampiamo in console le informazioni fornite tramite oggetti
+        console.log(`${key}: ${actualMember[key]}`)
+    }
+}
