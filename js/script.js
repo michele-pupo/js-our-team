@@ -58,10 +58,17 @@ for (let i = 0; i < membersTeam.length; i++){
 
     const actualMember = membersTeam[i];
 
+    let textOnPage = "";
+
     // ciclo "for-in" per ciclare su ogni chiave dell'oggetto
     for (let key in actualMember){
 
         // stampiamo in console le informazioni fornite tramite oggetti
-        console.log(`${key}: ${actualMember[key]}`)
+        console.log(`${key}: ${actualMember[key]}`);
+
+        textOnPage += `${key}: ${actualMember[key]}`;
     }
+
+    // stampiamo in pagina le informazioni fornite tramite oggetti
+    listElement.innerHTML += `<li>${textOnPage}</li>`;
 }
