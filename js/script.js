@@ -82,10 +82,15 @@ for (let i = 0; i < membersTeam.length; i++){
     img.src = `img/${actualMember.photo}`;
     liElement.append(img);
 
-    // appendiamo la chiave "nome" in pagina, al di sotto della foto
+    // appendiamo la chiave "name" in pagina, al di sotto della foto
     const h3Element = document.createElement("h3");
     h3Element.innerHTML = actualMember.name;
     liElement.append(h3Element);
+
+    // appendiamo la chiave "role" in pagina, al di sotto del nome
+    const h4Element = document.createElement("h4");
+    h4Element.innerHTML = actualMember.role;
+    liElement.append(h4Element);
     
 
     listElement.append(liElement);
