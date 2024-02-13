@@ -69,18 +69,21 @@ for (let i = 0; i < membersTeam.length; i++){
         textOnPage += `${key}: ${actualMember[key]}`;
     }
 
-    // // stampiamo in pagina le informazioni fornite tramite oggetti
+    // stampiamo in pagina le informazioni fornite tramite oggetti
     // listElement.innerHTML += `<li>${textOnPage}</li>`;
 
 
-// utilizziamo "append" per inserire oggetti nel DOM
-const li = document.createElement('li');
-li.classList.add('card');
+    // utilizziamo "append" per inserire oggetti nel DOM
+    const li = document.createElement("li");
+    li.classList.add("card");
 
-const img = document.createElement('img');
-img.src = `img/${actualMember.photo}`;
-img.alt = actualMember.photo;
-img.classList.add('image-set')
-li.append(img);
+    // appendiamo l'immagine con chiave "photo"
+    const img = document.createElement("img");
+    img.src = `img/${actualMember.photo}`;
+    li.append(img);
+    
+
+    listElement.append(li);
+
 
 }
